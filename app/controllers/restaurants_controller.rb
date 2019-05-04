@@ -6,7 +6,7 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.near(params[:city] || 'São Paulo')
     filter_by_category if params[:category]
       render json: @restaurants
-    end
+    
   end
 
   def show
@@ -37,6 +37,5 @@ class RestaurantsController < ApplicationController
       @restaurant = Restaurant.find_by(id: params[:id])
     end
 
-end
 
 

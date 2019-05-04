@@ -11,7 +11,7 @@ class RestaurantSerializer < ActiveModel::Serializer
   end
 
   def review
-    object.reviews&&.average(:value)
+    object.reviews&.average(:value)
   end
 
   def category_title

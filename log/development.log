@@ -178,3 +178,1395 @@ FOREIGN KEY ("blob_id")
   ↳ bin/rails:9
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ db/seeds.rb:1
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  ↳ db/seeds.rb:2
+Creating scope :open. Overwriting existing method Restaurant.open.
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ db/seeds.rb:3
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 1], ["title", "mexicana"], ["created_at", "2019-05-04 22:10:19.968717"], ["updated_at", "2019-05-04 22:10:19.968717"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (107.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+[36m  Disk Storage (1.3ms) [0m[32mUploaded file to key: yU9e7TsA4DfLdAoKF2LpvXaA (checksum: GQF9otxCszErHnwhJPtaXQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mActiveStorage::Blob Create (1.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "yU9e7TsA4DfLdAoKF2LpvXaA"], ["filename", "mexican.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 164392], ["checksum", "GQF9otxCszErHnwhJPtaXQ=="], ["created_at", "2019-05-04 22:10:20.330075"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (134.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Category"], ["record_id", 1], ["blob_id", 1], ["created_at", "2019-05-04 22:10:20.484336"]]
+  ↳ db/seeds.rb:10
+  [1m[36mCategory Update (0.2ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = ? WHERE "categories"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:20.487545"], ["id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (133.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:10
+[ActiveJob] [ActiveStorage::AnalyzeJob] [58202559-2828-407b-a08f-de30c8e84a73] Performing ActiveStorage::AnalyzeJob (Job ID: 58202559-2828-407b-a08f-de30c8e84a73) from Inline(default) with arguments: #<GlobalID:0xb630eed4 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [58202559-2828-407b-a08f-de30c8e84a73] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: yU9e7TsA4DfLdAoKF2LpvXaA[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [58202559-2828-407b-a08f-de30c8e84a73] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [58202559-2828-407b-a08f-de30c8e84a73]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [58202559-2828-407b-a08f-de30c8e84a73]   ↳ db/seeds.rb:10
+[ActiveJob] [ActiveStorage::AnalyzeJob] [58202559-2828-407b-a08f-de30c8e84a73]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [58202559-2828-407b-a08f-de30c8e84a73]   ↳ db/seeds.rb:10
+[ActiveJob] [ActiveStorage::AnalyzeJob] [58202559-2828-407b-a08f-de30c8e84a73]   [1m[35m (157.3ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [58202559-2828-407b-a08f-de30c8e84a73]   ↳ db/seeds.rb:10
+[ActiveJob] [ActiveStorage::AnalyzeJob] [58202559-2828-407b-a08f-de30c8e84a73] Performed ActiveStorage::AnalyzeJob (Job ID: 58202559-2828-407b-a08f-de30c8e84a73) from Inline(default) in 295.01ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 58202559-2828-407b-a08f-de30c8e84a73) to Inline(default) with arguments: #<GlobalID:0x01ca9d14 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/1>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 2], ["title", "italiana"], ["created_at", "2019-05-04 22:10:21.045448"], ["updated_at", "2019-05-04 22:10:21.045448"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (129.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+[36m  Disk Storage (2.2ms) [0m[32mUploaded file to key: RsehsCtNDM7Ki2UPRcdWBLS7 (checksum: VkJVIGot5n2w09P8J9LMJw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "RsehsCtNDM7Ki2UPRcdWBLS7"], ["filename", "italian.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 125653], ["checksum", "VkJVIGot5n2w09P8J9LMJw=="], ["created_at", "2019-05-04 22:10:21.194280"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (117.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Category"], ["record_id", 2], ["blob_id", 2], ["created_at", "2019-05-04 22:10:21.317864"]]
+  ↳ db/seeds.rb:14
+  [1m[36mCategory Update (0.4ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = ? WHERE "categories"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:21.322319"], ["id", 2]]
+  ↳ db/seeds.rb:14
+  [1m[35m (116.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [50b631e2-a797-4f06-b5b4-3050a70d4d88] Performing ActiveStorage::AnalyzeJob (Job ID: 50b631e2-a797-4f06-b5b4-3050a70d4d88) from Inline(default) with arguments: #<GlobalID:0x02670410 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [50b631e2-a797-4f06-b5b4-3050a70d4d88] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: RsehsCtNDM7Ki2UPRcdWBLS7[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [50b631e2-a797-4f06-b5b4-3050a70d4d88] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [50b631e2-a797-4f06-b5b4-3050a70d4d88]   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [50b631e2-a797-4f06-b5b4-3050a70d4d88]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [50b631e2-a797-4f06-b5b4-3050a70d4d88]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [50b631e2-a797-4f06-b5b4-3050a70d4d88]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [50b631e2-a797-4f06-b5b4-3050a70d4d88]   [1m[35m (127.2ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [50b631e2-a797-4f06-b5b4-3050a70d4d88]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [50b631e2-a797-4f06-b5b4-3050a70d4d88] Performed ActiveStorage::AnalyzeJob (Job ID: 50b631e2-a797-4f06-b5b4-3050a70d4d88) from Inline(default) in 137.2ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 50b631e2-a797-4f06-b5b4-3050a70d4d88) to Inline(default) with arguments: #<GlobalID:0x025e49d8 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/2>>
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 3], ["title", "japonesa"], ["created_at", "2019-05-04 22:10:21.587826"], ["updated_at", "2019-05-04 22:10:21.587826"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (143.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+[36m  Disk Storage (0.9ms) [0m[32mUploaded file to key: by6ZuYqxReMsVgH12k3WjwMY (checksum: VroUMJbl9i+K077scUgt4A==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "by6ZuYqxReMsVgH12k3WjwMY"], ["filename", "japonese.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 71527], ["checksum", "VroUMJbl9i+K077scUgt4A=="], ["created_at", "2019-05-04 22:10:21.740387"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (131.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Category"], ["record_id", 3], ["blob_id", 3], ["created_at", "2019-05-04 22:10:21.878035"]]
+  ↳ db/seeds.rb:18
+  [1m[36mCategory Update (0.2ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = ? WHERE "categories"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:21.880521"], ["id", 3]]
+  ↳ db/seeds.rb:18
+  [1m[35m (111.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:18
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ae8d47d8-e54b-4d46-ba25-81451624fdda] Performing ActiveStorage::AnalyzeJob (Job ID: ae8d47d8-e54b-4d46-ba25-81451624fdda) from Inline(default) with arguments: #<GlobalID:0x02322948 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ae8d47d8-e54b-4d46-ba25-81451624fdda] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: by6ZuYqxReMsVgH12k3WjwMY[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ae8d47d8-e54b-4d46-ba25-81451624fdda] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ae8d47d8-e54b-4d46-ba25-81451624fdda]   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ae8d47d8-e54b-4d46-ba25-81451624fdda]   ↳ db/seeds.rb:18
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ae8d47d8-e54b-4d46-ba25-81451624fdda]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ae8d47d8-e54b-4d46-ba25-81451624fdda]   ↳ db/seeds.rb:18
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ae8d47d8-e54b-4d46-ba25-81451624fdda]   [1m[35m (130.7ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ae8d47d8-e54b-4d46-ba25-81451624fdda]   ↳ db/seeds.rb:18
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ae8d47d8-e54b-4d46-ba25-81451624fdda] Performed ActiveStorage::AnalyzeJob (Job ID: ae8d47d8-e54b-4d46-ba25-81451624fdda) from Inline(default) in 141.19ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: ae8d47d8-e54b-4d46-ba25-81451624fdda) to Inline(default) with arguments: #<GlobalID:0x01a9891c @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/3>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 4], ["title", "vegana"], ["created_at", "2019-05-04 22:10:22.145410"], ["updated_at", "2019-05-04 22:10:22.145410"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (108.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+[36m  Disk Storage (1.9ms) [0m[32mUploaded file to key: M4YDXLx3fn7emDs6v8f1Uo6W (checksum: CAi1dzXvL7/PU6p21wlK9w==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "M4YDXLx3fn7emDs6v8f1Uo6W"], ["filename", "vegan.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 216914], ["checksum", "CAi1dzXvL7/PU6p21wlK9w=="], ["created_at", "2019-05-04 22:10:22.265421"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (133.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (1.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Category"], ["record_id", 4], ["blob_id", 4], ["created_at", "2019-05-04 22:10:22.414015"]]
+  ↳ db/seeds.rb:22
+  [1m[36mCategory Update (0.3ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = ? WHERE "categories"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:22.418860"], ["id", 4]]
+  ↳ db/seeds.rb:22
+  [1m[35m (97.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:22
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3f059686-3889-4bfb-8bbe-51b3e9554eac] Performing ActiveStorage::AnalyzeJob (Job ID: 3f059686-3889-4bfb-8bbe-51b3e9554eac) from Inline(default) with arguments: #<GlobalID:0x01c70528 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3f059686-3889-4bfb-8bbe-51b3e9554eac] [36m  Disk Storage (1.0ms) [0m[34mDownloaded file from key: M4YDXLx3fn7emDs6v8f1Uo6W[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3f059686-3889-4bfb-8bbe-51b3e9554eac] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3f059686-3889-4bfb-8bbe-51b3e9554eac]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3f059686-3889-4bfb-8bbe-51b3e9554eac]   ↳ db/seeds.rb:22
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3f059686-3889-4bfb-8bbe-51b3e9554eac]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3f059686-3889-4bfb-8bbe-51b3e9554eac]   ↳ db/seeds.rb:22
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3f059686-3889-4bfb-8bbe-51b3e9554eac]   [1m[35m (145.6ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3f059686-3889-4bfb-8bbe-51b3e9554eac]   ↳ db/seeds.rb:22
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3f059686-3889-4bfb-8bbe-51b3e9554eac] Performed ActiveStorage::AnalyzeJob (Job ID: 3f059686-3889-4bfb-8bbe-51b3e9554eac) from Inline(default) in 158.63ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 3f059686-3889-4bfb-8bbe-51b3e9554eac) to Inline(default) with arguments: #<GlobalID:0x023b8790 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/4>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 5], ["title", "vegana"], ["created_at", "2019-05-04 22:10:22.690175"], ["updated_at", "2019-05-04 22:10:22.690175"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (109.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+[36m  Disk Storage (1.5ms) [0m[32mUploaded file to key: tc3SDfEg6Fan1WtroHJJV3Jd (checksum: gV+ZcvQvV0QSJ79UeILL+g==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "tc3SDfEg6Fan1WtroHJJV3Jd"], ["filename", "peruana.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 154270], ["checksum", "gV+ZcvQvV0QSJ79UeILL+g=="], ["created_at", "2019-05-04 22:10:22.812933"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (112.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Category"], ["record_id", 5], ["blob_id", 5], ["created_at", "2019-05-04 22:10:22.933503"]]
+  ↳ db/seeds.rb:27
+  [1m[36mCategory Update (0.4ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = ? WHERE "categories"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:22.936532"], ["id", 5]]
+  ↳ db/seeds.rb:27
+  [1m[35m (136.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:27
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d3a5584-c461-42ff-9128-e3ce1c875931] Performing ActiveStorage::AnalyzeJob (Job ID: 5d3a5584-c461-42ff-9128-e3ce1c875931) from Inline(default) with arguments: #<GlobalID:0x02616e9c @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/5>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d3a5584-c461-42ff-9128-e3ce1c875931] [36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: tc3SDfEg6Fan1WtroHJJV3Jd[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d3a5584-c461-42ff-9128-e3ce1c875931] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d3a5584-c461-42ff-9128-e3ce1c875931]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d3a5584-c461-42ff-9128-e3ce1c875931]   ↳ db/seeds.rb:27
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d3a5584-c461-42ff-9128-e3ce1c875931]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d3a5584-c461-42ff-9128-e3ce1c875931]   ↳ db/seeds.rb:27
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d3a5584-c461-42ff-9128-e3ce1c875931]   [1m[35m (111.3ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d3a5584-c461-42ff-9128-e3ce1c875931]   ↳ db/seeds.rb:27
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5d3a5584-c461-42ff-9128-e3ce1c875931] Performed ActiveStorage::AnalyzeJob (Job ID: 5d3a5584-c461-42ff-9128-e3ce1c875931) from Inline(default) in 122.65ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 5d3a5584-c461-42ff-9128-e3ce1c875931) to Inline(default) with arguments: #<GlobalID:0x026c819c @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/5>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mRestaurant Create (1.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "description", "status", "delivery_tax", "state", "city", "street", "neighborhood", "number", "latitude", "longitude", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Los Sombreros"], ["description", "Nossa missão tem sido ajudar as pessoas a alcançar seus objetivos de saúde e bem-estar. Embora tenhamos mudado ao longo dos anos, nossos valores permaneceram os mesmos."], ["status", 1], ["delivery_tax", 5.5], ["state", "SP"], ["city", "São Paulo"], ["street", "Melo Barreto"], ["neighborhood", "Brás"], ["number", "1393"], ["latitude", -23.5458414], ["longitude", -46.6214129], ["category_id", 1], ["created_at", "2019-05-04 22:10:24.116985"], ["updated_at", "2019-05-04 22:10:24.116985"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (107.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:34
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+[36m  Disk Storage (2.1ms) [0m[32mUploaded file to key: ZHgVxedjivamZr4b3ENNSVsp (checksum: 7r/DK32Mv5bcP+oY3ZoSew==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:41
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "ZHgVxedjivamZr4b3ENNSVsp"], ["filename", "1.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 284707], ["checksum", "7r/DK32Mv5bcP+oY3ZoSew=="], ["created_at", "2019-05-04 22:10:24.244681"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (90.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:41
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Restaurant"], ["record_id", 1], ["blob_id", 6], ["created_at", "2019-05-04 22:10:24.341926"]]
+  ↳ db/seeds.rb:41
+  [1m[36mRestaurant Update (0.3ms)[0m  [1m[33mUPDATE "restaurants" SET "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:24.345462"], ["id", 1]]
+  ↳ db/seeds.rb:41
+  [1m[35m (100.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:41
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:41
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8d3fcfdb-59be-43b1-ae73-6894d8d66e66] Performing ActiveStorage::AnalyzeJob (Job ID: 8d3fcfdb-59be-43b1-ae73-6894d8d66e66) from Inline(default) with arguments: #<GlobalID:0x0082ba04 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/6>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8d3fcfdb-59be-43b1-ae73-6894d8d66e66] [36m  Disk Storage (0.7ms) [0m[34mDownloaded file from key: ZHgVxedjivamZr4b3ENNSVsp[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8d3fcfdb-59be-43b1-ae73-6894d8d66e66] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8d3fcfdb-59be-43b1-ae73-6894d8d66e66]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8d3fcfdb-59be-43b1-ae73-6894d8d66e66]   ↳ db/seeds.rb:41
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8d3fcfdb-59be-43b1-ae73-6894d8d66e66]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 6]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8d3fcfdb-59be-43b1-ae73-6894d8d66e66]   ↳ db/seeds.rb:41
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8d3fcfdb-59be-43b1-ae73-6894d8d66e66]   [1m[35m (239.3ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8d3fcfdb-59be-43b1-ae73-6894d8d66e66]   ↳ db/seeds.rb:41
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8d3fcfdb-59be-43b1-ae73-6894d8d66e66] Performed ActiveStorage::AnalyzeJob (Job ID: 8d3fcfdb-59be-43b1-ae73-6894d8d66e66) from Inline(default) in 255.69ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 8d3fcfdb-59be-43b1-ae73-6894d8d66e66) to Inline(default) with arguments: #<GlobalID:0x01899558 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/6>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:42
+  [1m[36mProductCategory Create (1.2ms)[0m  [1m[32mINSERT INTO "product_categories" ("title", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Pratos Mexicanos"], ["restaurant_id", 1], ["created_at", "2019-05-04 22:10:25.497983"], ["updated_at", "2019-05-04 22:10:25.497983"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (173.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:43
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Nacho Guacamole"], ["description", "Tortilhas com Guacamole"], ["price", 19.0], ["product_category_id", 1], ["created_at", "2019-05-04 22:10:26.647654"], ["updated_at", "2019-05-04 22:10:26.647654"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (149.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:43
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:44
+[36m  Disk Storage (0.9ms) [0m[32mUploaded file to key: YsyR45d2vUwANBrCBJgjgjXm (checksum: gPUpvSnjV8pm4zEZHLjGJQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mActiveStorage::Blob Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "YsyR45d2vUwANBrCBJgjgjXm"], ["filename", "nachosg.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 39518], ["checksum", "gPUpvSnjV8pm4zEZHLjGJQ=="], ["created_at", "2019-05-04 22:10:26.811335"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (118.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:44
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 1], ["blob_id", 7], ["created_at", "2019-05-04 22:10:26.942217"]]
+  ↳ db/seeds.rb:44
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:26.945960"], ["id", 1]]
+  ↳ db/seeds.rb:44
+  [1m[35m (158.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:44
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:44
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3bef0ce6-50ae-4a90-940c-9b8cfb609f99] Performing ActiveStorage::AnalyzeJob (Job ID: 3bef0ce6-50ae-4a90-940c-9b8cfb609f99) from Inline(default) with arguments: #<GlobalID:0x02b3ba58 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/7>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3bef0ce6-50ae-4a90-940c-9b8cfb609f99] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: YsyR45d2vUwANBrCBJgjgjXm[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3bef0ce6-50ae-4a90-940c-9b8cfb609f99] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3bef0ce6-50ae-4a90-940c-9b8cfb609f99]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3bef0ce6-50ae-4a90-940c-9b8cfb609f99]   ↳ db/seeds.rb:44
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3bef0ce6-50ae-4a90-940c-9b8cfb609f99]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 7]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3bef0ce6-50ae-4a90-940c-9b8cfb609f99]   ↳ db/seeds.rb:44
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3bef0ce6-50ae-4a90-940c-9b8cfb609f99]   [1m[35m (126.0ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3bef0ce6-50ae-4a90-940c-9b8cfb609f99]   ↳ db/seeds.rb:44
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3bef0ce6-50ae-4a90-940c-9b8cfb609f99] Performed ActiveStorage::AnalyzeJob (Job ID: 3bef0ce6-50ae-4a90-940c-9b8cfb609f99) from Inline(default) in 138.68ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 3bef0ce6-50ae-4a90-940c-9b8cfb609f99) to Inline(default) with arguments: #<GlobalID:0xb6354da8 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/7>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:45
+  [1m[36mProduct Create (1.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Nacho"], ["description", "Tortilhas com milho"], ["price", 19.0], ["product_category_id", 1], ["created_at", "2019-05-04 22:10:27.998920"], ["updated_at", "2019-05-04 22:10:27.998920"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (132.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:45
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+[36m  Disk Storage (0.7ms) [0m[32mUploaded file to key: MXK7h3FAzUn5auLmNyQDWHNW (checksum: Lo233VpQQeinZVR67e3dQA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "MXK7h3FAzUn5auLmNyQDWHNW"], ["filename", "nachosg2.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 13502], ["checksum", "Lo233VpQQeinZVR67e3dQA=="], ["created_at", "2019-05-04 22:10:28.162124"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (137.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 2], ["blob_id", 8], ["created_at", "2019-05-04 22:10:28.306457"]]
+  ↳ db/seeds.rb:46
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:28.309172"], ["id", 2]]
+  ↳ db/seeds.rb:46
+  [1m[35m (115.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:46
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f81863-4659-4352-bbf9-23a7ffb4f6e7] Performing ActiveStorage::AnalyzeJob (Job ID: 06f81863-4659-4352-bbf9-23a7ffb4f6e7) from Inline(default) with arguments: #<GlobalID:0xb6111cd0 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/8>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f81863-4659-4352-bbf9-23a7ffb4f6e7] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: MXK7h3FAzUn5auLmNyQDWHNW[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f81863-4659-4352-bbf9-23a7ffb4f6e7] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f81863-4659-4352-bbf9-23a7ffb4f6e7]   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f81863-4659-4352-bbf9-23a7ffb4f6e7]   ↳ db/seeds.rb:46
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f81863-4659-4352-bbf9-23a7ffb4f6e7]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 8]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f81863-4659-4352-bbf9-23a7ffb4f6e7]   ↳ db/seeds.rb:46
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f81863-4659-4352-bbf9-23a7ffb4f6e7]   [1m[35m (110.6ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f81863-4659-4352-bbf9-23a7ffb4f6e7]   ↳ db/seeds.rb:46
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f81863-4659-4352-bbf9-23a7ffb4f6e7] Performed ActiveStorage::AnalyzeJob (Job ID: 06f81863-4659-4352-bbf9-23a7ffb4f6e7) from Inline(default) in 120.0ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 06f81863-4659-4352-bbf9-23a7ffb4f6e7) to Inline(default) with arguments: #<GlobalID:0xb6356220 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/8>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:49
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:49
+  [1m[36mRestaurant Create (1.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "description", "status", "delivery_tax", "state", "city", "street", "neighborhood", "number", "latitude", "longitude", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ola Que Tal"], ["description", "Para alcançar e manter essa distinção em comida e vinho, serviço, ambiente e ambiente, o restaurante ganha reputação de primeira classe por gastronomia, hospitalidade graciosa e informada, conforto e beleza que atraem clientes novos e repetidos ano após ano."], ["status", 1], ["delivery_tax", 5.5], ["state", "SP"], ["city", "São Paulo"], ["street", "Viela Eugênio Monteiro Junior"], ["neighborhood", "Paraíso"], ["number", "659"], ["latitude", -23.5777756], ["longitude", -46.650557], ["category_id", 1], ["created_at", "2019-05-04 22:10:29.274414"], ["updated_at", "2019-05-04 22:10:29.274414"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (93.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:49
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:56
+[36m  Disk Storage (2.6ms) [0m[32mUploaded file to key: m5cg9VJtF6ktk2CkKNdejYff (checksum: +us1vi4Gho2IDPaBG43Smw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:56
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "m5cg9VJtF6ktk2CkKNdejYff"], ["filename", "2.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 386736], ["checksum", "+us1vi4Gho2IDPaBG43Smw=="], ["created_at", "2019-05-04 22:10:29.387104"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (104.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:56
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Restaurant"], ["record_id", 2], ["blob_id", 9], ["created_at", "2019-05-04 22:10:29.496718"]]
+  ↳ db/seeds.rb:56
+  [1m[36mRestaurant Update (0.2ms)[0m  [1m[33mUPDATE "restaurants" SET "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:29.500112"], ["id", 2]]
+  ↳ db/seeds.rb:56
+  [1m[35m (124.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:56
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:56
+[ActiveJob] [ActiveStorage::AnalyzeJob] [69f83434-1008-4f72-949f-439c5ae84949] Performing ActiveStorage::AnalyzeJob (Job ID: 69f83434-1008-4f72-949f-439c5ae84949) from Inline(default) with arguments: #<GlobalID:0xb6369460 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/9>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [69f83434-1008-4f72-949f-439c5ae84949] [36m  Disk Storage (5.0ms) [0m[34mDownloaded file from key: m5cg9VJtF6ktk2CkKNdejYff[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [69f83434-1008-4f72-949f-439c5ae84949] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [69f83434-1008-4f72-949f-439c5ae84949]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [69f83434-1008-4f72-949f-439c5ae84949]   ↳ db/seeds.rb:56
+[ActiveJob] [ActiveStorage::AnalyzeJob] [69f83434-1008-4f72-949f-439c5ae84949]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 9]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [69f83434-1008-4f72-949f-439c5ae84949]   ↳ db/seeds.rb:56
+[ActiveJob] [ActiveStorage::AnalyzeJob] [69f83434-1008-4f72-949f-439c5ae84949]   [1m[35m (115.5ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [69f83434-1008-4f72-949f-439c5ae84949]   ↳ db/seeds.rb:56
+[ActiveJob] [ActiveStorage::AnalyzeJob] [69f83434-1008-4f72-949f-439c5ae84949] Performed ActiveStorage::AnalyzeJob (Job ID: 69f83434-1008-4f72-949f-439c5ae84949) from Inline(default) in 131.46ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 69f83434-1008-4f72-949f-439c5ae84949) to Inline(default) with arguments: #<GlobalID:0x02bad770 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/9>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:57
+  [1m[36mProductCategory Create (1.4ms)[0m  [1m[32mINSERT INTO "product_categories" ("title", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Pratos Mexicanos"], ["restaurant_id", 2], ["created_at", "2019-05-04 22:10:30.478352"], ["updated_at", "2019-05-04 22:10:30.478352"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (107.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mProduct Create (1.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Burrito"], ["description", "Tortilhas com Guacamole"], ["price", 19.0], ["product_category_id", 2], ["created_at", "2019-05-04 22:10:31.311354"], ["updated_at", "2019-05-04 22:10:31.311354"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (130.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:59
+[36m  Disk Storage (0.6ms) [0m[32mUploaded file to key: VKFPt9okHZRStPkbBXZ9i2v3 (checksum: U0/4sG20jBrwkp3OE5bL/A==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:59
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "VKFPt9okHZRStPkbBXZ9i2v3"], ["filename", "bt.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 43318], ["checksum", "U0/4sG20jBrwkp3OE5bL/A=="], ["created_at", "2019-05-04 22:10:31.453440"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (148.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:59
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 3], ["blob_id", 10], ["created_at", "2019-05-04 22:10:31.608970"]]
+  ↳ db/seeds.rb:59
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:31.612281"], ["id", 3]]
+  ↳ db/seeds.rb:59
+  [1m[35m (144.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:59
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:59
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2385db5-dc9e-4be0-b5e4-cde89bcbcab3] Performing ActiveStorage::AnalyzeJob (Job ID: e2385db5-dc9e-4be0-b5e4-cde89bcbcab3) from Inline(default) with arguments: #<GlobalID:0x0263c264 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/10>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2385db5-dc9e-4be0-b5e4-cde89bcbcab3] [36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: VKFPt9okHZRStPkbBXZ9i2v3[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2385db5-dc9e-4be0-b5e4-cde89bcbcab3] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2385db5-dc9e-4be0-b5e4-cde89bcbcab3]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2385db5-dc9e-4be0-b5e4-cde89bcbcab3]   ↳ db/seeds.rb:59
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2385db5-dc9e-4be0-b5e4-cde89bcbcab3]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 10]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2385db5-dc9e-4be0-b5e4-cde89bcbcab3]   ↳ db/seeds.rb:59
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2385db5-dc9e-4be0-b5e4-cde89bcbcab3]   [1m[35m (127.8ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2385db5-dc9e-4be0-b5e4-cde89bcbcab3]   ↳ db/seeds.rb:59
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2385db5-dc9e-4be0-b5e4-cde89bcbcab3] Performed ActiveStorage::AnalyzeJob (Job ID: e2385db5-dc9e-4be0-b5e4-cde89bcbcab3) from Inline(default) in 140.77ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: e2385db5-dc9e-4be0-b5e4-cde89bcbcab3) to Inline(default) with arguments: #<GlobalID:0x025adc08 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/10>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:60
+  [1m[36mProduct Create (3.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Quesadilha"], ["description", "Tortilhas de queijo"], ["price", 25.0], ["product_category_id", 2], ["created_at", "2019-05-04 22:10:32.622846"], ["updated_at", "2019-05-04 22:10:32.622846"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (127.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:60
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:61
+[36m  Disk Storage (0.8ms) [0m[32mUploaded file to key: MJE9MnC12LBuQoFMshVTgELX (checksum: 5JRLgt/bXaIsJJ7mhWia3g==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:61
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "MJE9MnC12LBuQoFMshVTgELX"], ["filename", "quesa.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 11028], ["checksum", "5JRLgt/bXaIsJJ7mhWia3g=="], ["created_at", "2019-05-04 22:10:32.765297"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (124.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:61
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 4], ["blob_id", 11], ["created_at", "2019-05-04 22:10:32.895328"]]
+  ↳ db/seeds.rb:61
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:32.897126"], ["id", 4]]
+  ↳ db/seeds.rb:61
+  [1m[35m (151.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:61
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:61
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1c7bd265-dfd4-47de-aa43-b2d595b6eb89] Performing ActiveStorage::AnalyzeJob (Job ID: 1c7bd265-dfd4-47de-aa43-b2d595b6eb89) from Inline(default) with arguments: #<GlobalID:0x01763a08 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/11>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1c7bd265-dfd4-47de-aa43-b2d595b6eb89] [36m  Disk Storage (0.8ms) [0m[34mDownloaded file from key: MJE9MnC12LBuQoFMshVTgELX[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1c7bd265-dfd4-47de-aa43-b2d595b6eb89] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1c7bd265-dfd4-47de-aa43-b2d595b6eb89]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1c7bd265-dfd4-47de-aa43-b2d595b6eb89]   ↳ db/seeds.rb:61
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1c7bd265-dfd4-47de-aa43-b2d595b6eb89]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 11]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1c7bd265-dfd4-47de-aa43-b2d595b6eb89]   ↳ db/seeds.rb:61
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1c7bd265-dfd4-47de-aa43-b2d595b6eb89]   [1m[35m (106.7ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1c7bd265-dfd4-47de-aa43-b2d595b6eb89]   ↳ db/seeds.rb:61
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1c7bd265-dfd4-47de-aa43-b2d595b6eb89] Performed ActiveStorage::AnalyzeJob (Job ID: 1c7bd265-dfd4-47de-aa43-b2d595b6eb89) from Inline(default) in 117.97ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 1c7bd265-dfd4-47de-aa43-b2d595b6eb89) to Inline(default) with arguments: #<GlobalID:0x00dd8308 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/11>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:65
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:65
+  [1m[36mRestaurant Create (1.1ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "description", "status", "delivery_tax", "state", "city", "street", "neighborhood", "number", "latitude", "longitude", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bravo"], ["description", "Estamos empenhados em usar os melhores ingredientes em nossas receitas. Nenhum alimento deixa a nossa cozinha que nós mesmos não comeríamos."], ["status", 1], ["delivery_tax", 3.5], ["state", "SP"], ["city", "São Paulo"], ["street", "Rua Coperema"], ["neighborhood", "Jardim Jaú (Zona Leste)"], ["number", "250"], ["latitude", -23.5112244], ["longitude", -46.5473553], ["category_id", 2], ["created_at", "2019-05-04 22:10:33.888233"], ["updated_at", "2019-05-04 22:10:33.888233"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (89.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:65
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:72
+[36m  Disk Storage (3.2ms) [0m[32mUploaded file to key: Yih5yLHRGH9VWxF4gm8gTYUn (checksum: Rf9lUG+rvhz0g48qN7cY0w==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:72
+  [1m[36mActiveStorage::Blob Create (1.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "Yih5yLHRGH9VWxF4gm8gTYUn"], ["filename", "3.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 165155], ["checksum", "Rf9lUG+rvhz0g48qN7cY0w=="], ["created_at", "2019-05-04 22:10:33.998913"]]
+  ↳ db/seeds.rb:72
+  [1m[35m (112.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:72
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:72
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Restaurant"], ["record_id", 3], ["blob_id", 12], ["created_at", "2019-05-04 22:10:34.118720"]]
+  ↳ db/seeds.rb:72
+  [1m[36mRestaurant Update (0.3ms)[0m  [1m[33mUPDATE "restaurants" SET "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:34.122590"], ["id", 3]]
+  ↳ db/seeds.rb:72
+  [1m[35m (123.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:72
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:72
+[ActiveJob] [ActiveStorage::AnalyzeJob] [680c97fe-62d7-428f-a924-77dc56d0d432] Performing ActiveStorage::AnalyzeJob (Job ID: 680c97fe-62d7-428f-a924-77dc56d0d432) from Inline(default) with arguments: #<GlobalID:0x0249f7e4 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/12>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [680c97fe-62d7-428f-a924-77dc56d0d432] [36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: Yih5yLHRGH9VWxF4gm8gTYUn[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [680c97fe-62d7-428f-a924-77dc56d0d432] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [680c97fe-62d7-428f-a924-77dc56d0d432]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [680c97fe-62d7-428f-a924-77dc56d0d432]   ↳ db/seeds.rb:72
+[ActiveJob] [ActiveStorage::AnalyzeJob] [680c97fe-62d7-428f-a924-77dc56d0d432]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 12]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [680c97fe-62d7-428f-a924-77dc56d0d432]   ↳ db/seeds.rb:72
+[ActiveJob] [ActiveStorage::AnalyzeJob] [680c97fe-62d7-428f-a924-77dc56d0d432]   [1m[35m (143.2ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [680c97fe-62d7-428f-a924-77dc56d0d432]   ↳ db/seeds.rb:72
+[ActiveJob] [ActiveStorage::AnalyzeJob] [680c97fe-62d7-428f-a924-77dc56d0d432] Performed ActiveStorage::AnalyzeJob (Job ID: 680c97fe-62d7-428f-a924-77dc56d0d432) from Inline(default) in 155.05ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 680c97fe-62d7-428f-a924-77dc56d0d432) to Inline(default) with arguments: #<GlobalID:0x025de0d8 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/12>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:73
+  [1m[36mProductCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "product_categories" ("title", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Porções"], ["restaurant_id", 3], ["created_at", "2019-05-04 22:10:35.156248"], ["updated_at", "2019-05-04 22:10:35.156248"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (111.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:74
+  [1m[36mProduct Create (1.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Berinjela à parmegiana"], ["description", "Com arroz e fritas"], ["price", 78.0], ["product_category_id", 3], ["created_at", "2019-05-04 22:10:35.988176"], ["updated_at", "2019-05-04 22:10:35.988176"]]
+  ↳ db/seeds.rb:74
+  [1m[35m (130.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:74
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:75
+[36m  Disk Storage (0.7ms) [0m[32mUploaded file to key: ZH3Ky9a4mdtLqMMb6YkhT9et (checksum: RfcwMhOT2ExO+etULUyIKA==)[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:75
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "ZH3Ky9a4mdtLqMMb6YkhT9et"], ["filename", "berinjela.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 51258], ["checksum", "RfcwMhOT2ExO+etULUyIKA=="], ["created_at", "2019-05-04 22:10:36.162008"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (152.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:75
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 5], ["blob_id", 13], ["created_at", "2019-05-04 22:10:36.321775"]]
+  ↳ db/seeds.rb:75
+  [1m[36mProduct Update (0.2ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:36.326209"], ["id", 5]]
+  ↳ db/seeds.rb:75
+  [1m[35m (131.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:75
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:75
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd62cd6c-1794-4c1d-9009-77097aec3eb9] Performing ActiveStorage::AnalyzeJob (Job ID: fd62cd6c-1794-4c1d-9009-77097aec3eb9) from Inline(default) with arguments: #<GlobalID:0x02302170 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/13>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd62cd6c-1794-4c1d-9009-77097aec3eb9] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: ZH3Ky9a4mdtLqMMb6YkhT9et[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd62cd6c-1794-4c1d-9009-77097aec3eb9] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd62cd6c-1794-4c1d-9009-77097aec3eb9]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd62cd6c-1794-4c1d-9009-77097aec3eb9]   ↳ db/seeds.rb:75
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd62cd6c-1794-4c1d-9009-77097aec3eb9]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 13]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd62cd6c-1794-4c1d-9009-77097aec3eb9]   ↳ db/seeds.rb:75
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd62cd6c-1794-4c1d-9009-77097aec3eb9]   [1m[35m (109.9ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd62cd6c-1794-4c1d-9009-77097aec3eb9]   ↳ db/seeds.rb:75
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fd62cd6c-1794-4c1d-9009-77097aec3eb9] Performed ActiveStorage::AnalyzeJob (Job ID: fd62cd6c-1794-4c1d-9009-77097aec3eb9) from Inline(default) in 119.31ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: fd62cd6c-1794-4c1d-9009-77097aec3eb9) to Inline(default) with arguments: #<GlobalID:0x0242cba4 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/13>>
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:76
+  [1m[36mProduct Create (1.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Fritas"], ["description", "Bata frita com bacon"], ["price", 35.0], ["product_category_id", 3], ["created_at", "2019-05-04 22:10:37.325183"], ["updated_at", "2019-05-04 22:10:37.325183"]]
+  ↳ db/seeds.rb:76
+  [1m[35m (428.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:76
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:77
+[36m  Disk Storage (1.9ms) [0m[32mUploaded file to key: ygNib2oQ3bFL3fbZsHWf3tes (checksum: 1NC6jYqSIVfOJ1N2qcGGtg==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:77
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "ygNib2oQ3bFL3fbZsHWf3tes"], ["filename", "fritas.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 117995], ["checksum", "1NC6jYqSIVfOJ1N2qcGGtg=="], ["created_at", "2019-05-04 22:10:37.767669"]]
+  ↳ db/seeds.rb:77
+  [1m[35m (107.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:77
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:77
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 6], ["blob_id", 14], ["created_at", "2019-05-04 22:10:37.884273"]]
+  ↳ db/seeds.rb:77
+  [1m[36mProduct Update (0.2ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:37.888453"], ["id", 6]]
+  ↳ db/seeds.rb:77
+  [1m[35m (112.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:77
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:77
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ca5a75a9-1233-40a6-88bd-1ace2991d0fb] Performing ActiveStorage::AnalyzeJob (Job ID: ca5a75a9-1233-40a6-88bd-1ace2991d0fb) from Inline(default) with arguments: #<GlobalID:0x026d6fe4 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/14>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ca5a75a9-1233-40a6-88bd-1ace2991d0fb] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: ygNib2oQ3bFL3fbZsHWf3tes[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ca5a75a9-1233-40a6-88bd-1ace2991d0fb] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ca5a75a9-1233-40a6-88bd-1ace2991d0fb]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ca5a75a9-1233-40a6-88bd-1ace2991d0fb]   ↳ db/seeds.rb:77
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ca5a75a9-1233-40a6-88bd-1ace2991d0fb]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 14]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ca5a75a9-1233-40a6-88bd-1ace2991d0fb]   ↳ db/seeds.rb:77
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ca5a75a9-1233-40a6-88bd-1ace2991d0fb]   [1m[35m (176.9ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ca5a75a9-1233-40a6-88bd-1ace2991d0fb]   ↳ db/seeds.rb:77
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ca5a75a9-1233-40a6-88bd-1ace2991d0fb] Performed ActiveStorage::AnalyzeJob (Job ID: ca5a75a9-1233-40a6-88bd-1ace2991d0fb) from Inline(default) in 186.58ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: ca5a75a9-1233-40a6-88bd-1ace2991d0fb) to Inline(default) with arguments: #<GlobalID:0x02860ec8 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/14>>
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:80
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:80
+  [1m[36mRestaurant Create (1.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "description", "status", "delivery_tax", "state", "city", "street", "neighborhood", "number", "latitude", "longitude", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "La Pergoletti"], ["description", "Nossa missão é estabelecer relações comerciais benéficas com diversos fornecedores que compartilham nosso compromisso com o atendimento ao cliente, qualidade e preços competitivos."], ["status", 1], ["delivery_tax", 6.7], ["state", "SP"], ["city", "São Paulo"], ["street", "Rua Joaquim Pinto"], ["neighborhood", "Vila Gomes Cardim"], ["number", "929"], ["latitude", -22.2960126], ["longitude", -49.5509549], ["category_id", 2], ["created_at", "2019-05-04 22:10:38.937918"], ["updated_at", "2019-05-04 22:10:38.937918"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (108.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:80
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:87
+[36m  Disk Storage (0.7ms) [0m[32mUploaded file to key: 1MWEvozpzS8xtnfvRi7sfQV8 (checksum: vFtn+orRLR19GDlqFzhvyw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:87
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "1MWEvozpzS8xtnfvRi7sfQV8"], ["filename", "4.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32270], ["checksum", "vFtn+orRLR19GDlqFzhvyw=="], ["created_at", "2019-05-04 22:10:39.109750"]]
+  ↳ db/seeds.rb:87
+  [1m[35m (144.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:87
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Restaurant"], ["record_id", 4], ["blob_id", 15], ["created_at", "2019-05-04 22:10:39.261923"]]
+  ↳ db/seeds.rb:87
+  [1m[36mRestaurant Update (0.2ms)[0m  [1m[33mUPDATE "restaurants" SET "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:39.264995"], ["id", 4]]
+  ↳ db/seeds.rb:87
+  [1m[35m (138.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:87
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:87
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bcc8b375-91ec-46c5-9a57-7947fd64ecf8] Performing ActiveStorage::AnalyzeJob (Job ID: bcc8b375-91ec-46c5-9a57-7947fd64ecf8) from Inline(default) with arguments: #<GlobalID:0xb63677c8 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/15>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bcc8b375-91ec-46c5-9a57-7947fd64ecf8] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: 1MWEvozpzS8xtnfvRi7sfQV8[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bcc8b375-91ec-46c5-9a57-7947fd64ecf8] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bcc8b375-91ec-46c5-9a57-7947fd64ecf8]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bcc8b375-91ec-46c5-9a57-7947fd64ecf8]   ↳ db/seeds.rb:87
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bcc8b375-91ec-46c5-9a57-7947fd64ecf8]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 15]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bcc8b375-91ec-46c5-9a57-7947fd64ecf8]   ↳ db/seeds.rb:87
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bcc8b375-91ec-46c5-9a57-7947fd64ecf8]   [1m[35m (114.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bcc8b375-91ec-46c5-9a57-7947fd64ecf8]   ↳ db/seeds.rb:87
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bcc8b375-91ec-46c5-9a57-7947fd64ecf8] Performed ActiveStorage::AnalyzeJob (Job ID: bcc8b375-91ec-46c5-9a57-7947fd64ecf8) from Inline(default) in 124.24ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: bcc8b375-91ec-46c5-9a57-7947fd64ecf8) to Inline(default) with arguments: #<GlobalID:0xb6380854 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/15>>
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:88
+  [1m[36mProductCategory Create (2.4ms)[0m  [1m[32mINSERT INTO "product_categories" ("title", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Fogazzas (Individuais)"], ["restaurant_id", 4], ["created_at", "2019-05-04 22:10:40.253019"], ["updated_at", "2019-05-04 22:10:40.253019"]]
+  ↳ db/seeds.rb:88
+  [1m[35m (122.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:88
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:89
+  [1m[36mProduct Create (1.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Fogazza Bacon"], ["description", "Bacon, parmesão e mussarela."], ["price", 12.0], ["product_category_id", 4], ["created_at", "2019-05-04 22:10:41.115350"], ["updated_at", "2019-05-04 22:10:41.115350"]]
+  ↳ db/seeds.rb:89
+  [1m[35m (99.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:89
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:90
+[36m  Disk Storage (1.5ms) [0m[32mUploaded file to key: WMGqQBtZrGRRZXJGV7k5MgGG (checksum: tKp0pQJe9/tIg4wcZuztBQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:90
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "WMGqQBtZrGRRZXJGV7k5MgGG"], ["filename", "fogazza.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 193720], ["checksum", "tKp0pQJe9/tIg4wcZuztBQ=="], ["created_at", "2019-05-04 22:10:41.228664"]]
+  ↳ db/seeds.rb:90
+  [1m[35m (104.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:90
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:90
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 7], ["blob_id", 16], ["created_at", "2019-05-04 22:10:41.338275"]]
+  ↳ db/seeds.rb:90
+  [1m[36mProduct Update (0.2ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:41.340863"], ["id", 7]]
+  ↳ db/seeds.rb:90
+  [1m[35m (127.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:90
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:90
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a5c2bb49-114f-47ea-be45-eeeda7f908a1] Performing ActiveStorage::AnalyzeJob (Job ID: a5c2bb49-114f-47ea-be45-eeeda7f908a1) from Inline(default) with arguments: #<GlobalID:0xb63a328c @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/16>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a5c2bb49-114f-47ea-be45-eeeda7f908a1] [36m  Disk Storage (1.7ms) [0m[34mDownloaded file from key: WMGqQBtZrGRRZXJGV7k5MgGG[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a5c2bb49-114f-47ea-be45-eeeda7f908a1] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a5c2bb49-114f-47ea-be45-eeeda7f908a1]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a5c2bb49-114f-47ea-be45-eeeda7f908a1]   ↳ db/seeds.rb:90
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a5c2bb49-114f-47ea-be45-eeeda7f908a1]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 16]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a5c2bb49-114f-47ea-be45-eeeda7f908a1]   ↳ db/seeds.rb:90
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a5c2bb49-114f-47ea-be45-eeeda7f908a1]   [1m[35m (98.0ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a5c2bb49-114f-47ea-be45-eeeda7f908a1]   ↳ db/seeds.rb:90
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a5c2bb49-114f-47ea-be45-eeeda7f908a1] Performed ActiveStorage::AnalyzeJob (Job ID: a5c2bb49-114f-47ea-be45-eeeda7f908a1) from Inline(default) in 107.56ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: a5c2bb49-114f-47ea-be45-eeeda7f908a1) to Inline(default) with arguments: #<GlobalID:0x015220b4 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/16>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:91
+  [1m[36mProduct Create (2.9ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Fogazza A moda da Casa"], ["description", "Calabresa, bacon, palmito e mussarela."], ["price", 12.0], ["product_category_id", 4], ["created_at", "2019-05-04 22:10:42.883868"], ["updated_at", "2019-05-04 22:10:42.883868"]]
+  ↳ db/seeds.rb:91
+  [1m[35m (124.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:91
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+[36m  Disk Storage (1.5ms) [0m[32mUploaded file to key: 5qLA5Sr4VpSRphMhTJ6S26h6 (checksum: tKp0pQJe9/tIg4wcZuztBQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:92
+  [1m[36mActiveStorage::Blob Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "5qLA5Sr4VpSRphMhTJ6S26h6"], ["filename", "fogazza.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 193720], ["checksum", "tKp0pQJe9/tIg4wcZuztBQ=="], ["created_at", "2019-05-04 22:10:43.026377"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (135.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:92
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 8], ["blob_id", 17], ["created_at", "2019-05-04 22:10:43.173268"]]
+  ↳ db/seeds.rb:92
+  [1m[36mProduct Update (0.2ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:43.176324"], ["id", 8]]
+  ↳ db/seeds.rb:92
+  [1m[35m (117.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:92
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:92
+[ActiveJob] [ActiveStorage::AnalyzeJob] [edeae3be-b5d9-4219-99a6-baa55a4cb420] Performing ActiveStorage::AnalyzeJob (Job ID: edeae3be-b5d9-4219-99a6-baa55a4cb420) from Inline(default) with arguments: #<GlobalID:0x02b82f34 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/17>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [edeae3be-b5d9-4219-99a6-baa55a4cb420] [36m  Disk Storage (1.0ms) [0m[34mDownloaded file from key: 5qLA5Sr4VpSRphMhTJ6S26h6[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [edeae3be-b5d9-4219-99a6-baa55a4cb420] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [edeae3be-b5d9-4219-99a6-baa55a4cb420]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [edeae3be-b5d9-4219-99a6-baa55a4cb420]   ↳ db/seeds.rb:92
+[ActiveJob] [ActiveStorage::AnalyzeJob] [edeae3be-b5d9-4219-99a6-baa55a4cb420]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 17]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [edeae3be-b5d9-4219-99a6-baa55a4cb420]   ↳ db/seeds.rb:92
+[ActiveJob] [ActiveStorage::AnalyzeJob] [edeae3be-b5d9-4219-99a6-baa55a4cb420]   [1m[35m (133.8ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [edeae3be-b5d9-4219-99a6-baa55a4cb420]   ↳ db/seeds.rb:92
+[ActiveJob] [ActiveStorage::AnalyzeJob] [edeae3be-b5d9-4219-99a6-baa55a4cb420] Performed ActiveStorage::AnalyzeJob (Job ID: edeae3be-b5d9-4219-99a6-baa55a4cb420) from Inline(default) in 143.22ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: edeae3be-b5d9-4219-99a6-baa55a4cb420) to Inline(default) with arguments: #<GlobalID:0x02bcc120 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/17>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:96
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:96
+  [1m[36mRestaurant Create (1.1ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "description", "status", "delivery_tax", "state", "city", "street", "neighborhood", "number", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sushi Eterno"], ["description", "Existimos para garantir que cada hóspede receba um serviço rápido, profissional, amigável e cortês."], ["status", 1], ["delivery_tax", 7.5], ["state", "SP"], ["city", "São Paulo"], ["street", "Avenida Manoel Domingos Pinto"], ["neighborhood", "Parque Anhangüera"], ["number", "507"], ["category_id", 3], ["created_at", "2019-05-04 22:10:44.201414"], ["updated_at", "2019-05-04 22:10:44.201414"]]
+  ↳ db/seeds.rb:96
+  [1m[35m (106.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:96
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:103
+[36m  Disk Storage (1.9ms) [0m[32mUploaded file to key: jUN8v54yyU1GeC3xjbjd18r2 (checksum: HYxDnwVyE79I6x1rIPGbvg==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:103
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "jUN8v54yyU1GeC3xjbjd18r2"], ["filename", "5.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 256664], ["checksum", "HYxDnwVyE79I6x1rIPGbvg=="], ["created_at", "2019-05-04 22:10:44.320501"]]
+  ↳ db/seeds.rb:103
+  [1m[35m (109.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:103
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Restaurant"], ["record_id", 5], ["blob_id", 18], ["created_at", "2019-05-04 22:10:44.436981"]]
+  ↳ db/seeds.rb:103
+  [1m[36mRestaurant Update (0.2ms)[0m  [1m[33mUPDATE "restaurants" SET "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:44.440306"], ["id", 5]]
+  ↳ db/seeds.rb:103
+  [1m[35m (84.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:103
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:103
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6cb0cc22-46c4-4dd9-be7a-a8fc2c5188d4] Performing ActiveStorage::AnalyzeJob (Job ID: 6cb0cc22-46c4-4dd9-be7a-a8fc2c5188d4) from Inline(default) with arguments: #<GlobalID:0xb611cc34 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/18>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6cb0cc22-46c4-4dd9-be7a-a8fc2c5188d4] [36m  Disk Storage (4.4ms) [0m[34mDownloaded file from key: jUN8v54yyU1GeC3xjbjd18r2[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6cb0cc22-46c4-4dd9-be7a-a8fc2c5188d4] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6cb0cc22-46c4-4dd9-be7a-a8fc2c5188d4]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6cb0cc22-46c4-4dd9-be7a-a8fc2c5188d4]   ↳ db/seeds.rb:103
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6cb0cc22-46c4-4dd9-be7a-a8fc2c5188d4]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 18]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6cb0cc22-46c4-4dd9-be7a-a8fc2c5188d4]   ↳ db/seeds.rb:103
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6cb0cc22-46c4-4dd9-be7a-a8fc2c5188d4]   [1m[35m (99.9ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6cb0cc22-46c4-4dd9-be7a-a8fc2c5188d4]   ↳ db/seeds.rb:103
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6cb0cc22-46c4-4dd9-be7a-a8fc2c5188d4] Performed ActiveStorage::AnalyzeJob (Job ID: 6cb0cc22-46c4-4dd9-be7a-a8fc2c5188d4) from Inline(default) in 118.0ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 6cb0cc22-46c4-4dd9-be7a-a8fc2c5188d4) to Inline(default) with arguments: #<GlobalID:0x015fbfbc @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/18>>
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:104
+  [1m[36mProductCategory Create (1.1ms)[0m  [1m[32mINSERT INTO "product_categories" ("title", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Entrada"], ["restaurant_id", 5], ["created_at", "2019-05-04 22:10:45.380843"], ["updated_at", "2019-05-04 22:10:45.380843"]]
+  ↳ db/seeds.rb:104
+  [1m[35m (81.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mProduct Create (2.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Temaki"], ["description", "Enrolado de arroz com alga marinha em forma de cone"], ["price", 19.99], ["product_category_id", 5], ["created_at", "2019-05-04 22:10:46.209776"], ["updated_at", "2019-05-04 22:10:46.209776"]]
+  ↳ db/seeds.rb:105
+  [1m[35m (85.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:105
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:106
+[36m  Disk Storage (0.6ms) [0m[32mUploaded file to key: W51h2Hdg7yLr71VE1fZMCPLM (checksum: MMPtvMqCwCt2IgioyIQiOQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:106
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "W51h2Hdg7yLr71VE1fZMCPLM"], ["filename", "temaki.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 5447], ["checksum", "MMPtvMqCwCt2IgioyIQiOQ=="], ["created_at", "2019-05-04 22:10:46.309305"]]
+  ↳ db/seeds.rb:106
+  [1m[35m (152.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:106
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:106
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 9], ["blob_id", 19], ["created_at", "2019-05-04 22:10:46.466746"]]
+  ↳ db/seeds.rb:106
+  [1m[36mProduct Update (0.2ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:46.469766"], ["id", 9]]
+  ↳ db/seeds.rb:106
+  [1m[35m (132.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:106
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:106
+[ActiveJob] [ActiveStorage::AnalyzeJob] [80b8e1e8-d7e5-4de4-9a48-e11cb4a3d833] Performing ActiveStorage::AnalyzeJob (Job ID: 80b8e1e8-d7e5-4de4-9a48-e11cb4a3d833) from Inline(default) with arguments: #<GlobalID:0x024069cc @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/19>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [80b8e1e8-d7e5-4de4-9a48-e11cb4a3d833] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: W51h2Hdg7yLr71VE1fZMCPLM[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [80b8e1e8-d7e5-4de4-9a48-e11cb4a3d833] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [80b8e1e8-d7e5-4de4-9a48-e11cb4a3d833]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [80b8e1e8-d7e5-4de4-9a48-e11cb4a3d833]   ↳ db/seeds.rb:106
+[ActiveJob] [ActiveStorage::AnalyzeJob] [80b8e1e8-d7e5-4de4-9a48-e11cb4a3d833]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 19]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [80b8e1e8-d7e5-4de4-9a48-e11cb4a3d833]   ↳ db/seeds.rb:106
+[ActiveJob] [ActiveStorage::AnalyzeJob] [80b8e1e8-d7e5-4de4-9a48-e11cb4a3d833]   [1m[35m (135.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [80b8e1e8-d7e5-4de4-9a48-e11cb4a3d833]   ↳ db/seeds.rb:106
+[ActiveJob] [ActiveStorage::AnalyzeJob] [80b8e1e8-d7e5-4de4-9a48-e11cb4a3d833] Performed ActiveStorage::AnalyzeJob (Job ID: 80b8e1e8-d7e5-4de4-9a48-e11cb4a3d833) from Inline(default) in 145.45ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 80b8e1e8-d7e5-4de4-9a48-e11cb4a3d833) to Inline(default) with arguments: #<GlobalID:0x0248766c @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/19>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:107
+  [1m[36mProduct Create (1.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sashimi"], ["description", "Peixe cru fatiado, salmao, atum e peixe prego"], ["price", 30.9], ["product_category_id", 5], ["created_at", "2019-05-04 22:10:47.496965"], ["updated_at", "2019-05-04 22:10:47.496965"]]
+  ↳ db/seeds.rb:107
+  [1m[35m (108.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:107
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:108
+[36m  Disk Storage (1.9ms) [0m[32mUploaded file to key: EM5jnjgqP5NogGNjZ85TzWDz (checksum: 1x/XSaPioUO9bpIPQpFPTA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:108
+  [1m[36mActiveStorage::Blob Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "EM5jnjgqP5NogGNjZ85TzWDz"], ["filename", "sashimi.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 140495], ["checksum", "1x/XSaPioUO9bpIPQpFPTA=="], ["created_at", "2019-05-04 22:10:47.621648"]]
+  ↳ db/seeds.rb:108
+  [1m[35m (141.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:108
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:108
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 10], ["blob_id", 20], ["created_at", "2019-05-04 22:10:47.771213"]]
+  ↳ db/seeds.rb:108
+  [1m[36mProduct Update (0.5ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:47.775075"], ["id", 10]]
+  ↳ db/seeds.rb:108
+  [1m[35m (168.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:108
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:108
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8fa99950-259e-406c-b56d-7b30d35158d9] Performing ActiveStorage::AnalyzeJob (Job ID: 8fa99950-259e-406c-b56d-7b30d35158d9) from Inline(default) with arguments: #<GlobalID:0x02b56f38 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/20>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8fa99950-259e-406c-b56d-7b30d35158d9] [36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: EM5jnjgqP5NogGNjZ85TzWDz[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8fa99950-259e-406c-b56d-7b30d35158d9] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8fa99950-259e-406c-b56d-7b30d35158d9]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8fa99950-259e-406c-b56d-7b30d35158d9]   ↳ db/seeds.rb:108
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8fa99950-259e-406c-b56d-7b30d35158d9]   [1m[36mActiveStorage::Blob Update (1.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 20]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8fa99950-259e-406c-b56d-7b30d35158d9]   ↳ db/seeds.rb:108
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8fa99950-259e-406c-b56d-7b30d35158d9]   [1m[35m (113.3ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8fa99950-259e-406c-b56d-7b30d35158d9]   ↳ db/seeds.rb:108
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8fa99950-259e-406c-b56d-7b30d35158d9] Performed ActiveStorage::AnalyzeJob (Job ID: 8fa99950-259e-406c-b56d-7b30d35158d9) from Inline(default) in 124.97ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 8fa99950-259e-406c-b56d-7b30d35158d9) to Inline(default) with arguments: #<GlobalID:0xb6123b4c @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/20>>
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:111
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:111
+  [1m[36mRestaurant Create (0.9ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "description", "status", "delivery_tax", "state", "city", "street", "neighborhood", "number", "latitude", "longitude", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Okuyamah"], ["description", "Restaurante conceituado, vencedor por 5 vezes como melhor restaurante Japones de São Paulo."], ["status", 1], ["delivery_tax", 8.3], ["state", "SP"], ["city", "São Paulo"], ["street", "Rua Francisco Artassio"], ["neighborhood", "Jardim das Laranjeiras"], ["number", "134"], ["latitude", -23.5055522], ["longitude", -46.6625972], ["category_id", 3], ["created_at", "2019-05-04 22:10:48.793836"], ["updated_at", "2019-05-04 22:10:48.793836"]]
+  ↳ db/seeds.rb:111
+  [1m[35m (109.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:111
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:118
+[36m  Disk Storage (2.1ms) [0m[32mUploaded file to key: b94NmcWmsyBvMTHtHFxTZeNH (checksum: EAq/Pa4tAVMuzUnCl8NTbw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:118
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "b94NmcWmsyBvMTHtHFxTZeNH"], ["filename", "6.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 344855], ["checksum", "EAq/Pa4tAVMuzUnCl8NTbw=="], ["created_at", "2019-05-04 22:10:48.918024"]]
+  ↳ db/seeds.rb:118
+  [1m[35m (133.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:118
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:118
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Restaurant"], ["record_id", 6], ["blob_id", 21], ["created_at", "2019-05-04 22:10:49.056427"]]
+  ↳ db/seeds.rb:118
+  [1m[36mRestaurant Update (0.3ms)[0m  [1m[33mUPDATE "restaurants" SET "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:49.059093"], ["id", 6]]
+  ↳ db/seeds.rb:118
+  [1m[35m (104.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:118
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:118
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fefa5e8f-cf8e-4f6e-942e-2e4eea808fcc] Performing ActiveStorage::AnalyzeJob (Job ID: fefa5e8f-cf8e-4f6e-942e-2e4eea808fcc) from Inline(default) with arguments: #<GlobalID:0xb610e0f8 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/21>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fefa5e8f-cf8e-4f6e-942e-2e4eea808fcc] [36m  Disk Storage (1.5ms) [0m[34mDownloaded file from key: b94NmcWmsyBvMTHtHFxTZeNH[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fefa5e8f-cf8e-4f6e-942e-2e4eea808fcc] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fefa5e8f-cf8e-4f6e-942e-2e4eea808fcc]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fefa5e8f-cf8e-4f6e-942e-2e4eea808fcc]   ↳ db/seeds.rb:118
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fefa5e8f-cf8e-4f6e-942e-2e4eea808fcc]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 21]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fefa5e8f-cf8e-4f6e-942e-2e4eea808fcc]   ↳ db/seeds.rb:118
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fefa5e8f-cf8e-4f6e-942e-2e4eea808fcc]   [1m[35m (103.5ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fefa5e8f-cf8e-4f6e-942e-2e4eea808fcc]   ↳ db/seeds.rb:118
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fefa5e8f-cf8e-4f6e-942e-2e4eea808fcc] Performed ActiveStorage::AnalyzeJob (Job ID: fefa5e8f-cf8e-4f6e-942e-2e4eea808fcc) from Inline(default) in 112.65ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: fefa5e8f-cf8e-4f6e-942e-2e4eea808fcc) to Inline(default) with arguments: #<GlobalID:0x027d93b0 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/21>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:119
+  [1m[36mProductCategory Create (3.7ms)[0m  [1m[32mINSERT INTO "product_categories" ("title", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Entrada"], ["restaurant_id", 6], ["created_at", "2019-05-04 22:10:50.022808"], ["updated_at", "2019-05-04 22:10:50.022808"]]
+  ↳ db/seeds.rb:119
+  [1m[35m (139.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:119
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:120
+  [1m[36mProduct Create (1.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Hossomaki 16 unidades"], ["description", "Enrolado fino com folha de alga marinha por fora."], ["price", 20.9], ["product_category_id", 6], ["created_at", "2019-05-04 22:10:50.923285"], ["updated_at", "2019-05-04 22:10:50.923285"]]
+  ↳ db/seeds.rb:120
+  [1m[35m (135.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:120
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:121
+[36m  Disk Storage (1.0ms) [0m[32mUploaded file to key: N67i3SVPY1GLLUoMiBc8fCYj (checksum: L5rVeRpm4bs0OcJHEA4FHg==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:121
+  [1m[36mActiveStorage::Blob Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "N67i3SVPY1GLLUoMiBc8fCYj"], ["filename", "hosomaki.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 41505], ["checksum", "L5rVeRpm4bs0OcJHEA4FHg=="], ["created_at", "2019-05-04 22:10:51.072509"]]
+  ↳ db/seeds.rb:121
+  [1m[35m (136.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:121
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:121
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 11], ["blob_id", 22], ["created_at", "2019-05-04 22:10:51.216190"]]
+  ↳ db/seeds.rb:121
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:51.219727"], ["id", 11]]
+  ↳ db/seeds.rb:121
+  [1m[35m (147.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:121
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:121
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fbf1a20d-f9cf-417e-8851-627be1aa4851] Performing ActiveStorage::AnalyzeJob (Job ID: fbf1a20d-f9cf-417e-8851-627be1aa4851) from Inline(default) with arguments: #<GlobalID:0x0234db34 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/22>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fbf1a20d-f9cf-417e-8851-627be1aa4851] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: N67i3SVPY1GLLUoMiBc8fCYj[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fbf1a20d-f9cf-417e-8851-627be1aa4851] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fbf1a20d-f9cf-417e-8851-627be1aa4851]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fbf1a20d-f9cf-417e-8851-627be1aa4851]   ↳ db/seeds.rb:121
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fbf1a20d-f9cf-417e-8851-627be1aa4851]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 22]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fbf1a20d-f9cf-417e-8851-627be1aa4851]   ↳ db/seeds.rb:121
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fbf1a20d-f9cf-417e-8851-627be1aa4851]   [1m[35m (121.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fbf1a20d-f9cf-417e-8851-627be1aa4851]   ↳ db/seeds.rb:121
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fbf1a20d-f9cf-417e-8851-627be1aa4851] Performed ActiveStorage::AnalyzeJob (Job ID: fbf1a20d-f9cf-417e-8851-627be1aa4851) from Inline(default) in 140.98ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: fbf1a20d-f9cf-417e-8851-627be1aa4851) to Inline(default) with arguments: #<GlobalID:0x015c84f0 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/22>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:122
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Hot roll - 10 unidades"], ["description", "10 unidades."], ["price", 12.0], ["product_category_id", 6], ["created_at", "2019-05-04 22:10:52.360503"], ["updated_at", "2019-05-04 22:10:52.360503"]]
+  ↳ db/seeds.rb:122
+  [1m[35m (257.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:122
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:123
+[36m  Disk Storage (4.8ms) [0m[32mUploaded file to key: iiTTYrRMYuujGBAdkaFgNYkh (checksum: kgUfOpJ5Rx4YYaq3kJUbZw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:123
+  [1m[36mActiveStorage::Blob Create (3.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "iiTTYrRMYuujGBAdkaFgNYkh"], ["filename", "hot-holl.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 35208], ["checksum", "kgUfOpJ5Rx4YYaq3kJUbZw=="], ["created_at", "2019-05-04 22:10:52.633857"]]
+  ↳ db/seeds.rb:123
+  [1m[35m (138.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:123
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:123
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 12], ["blob_id", 23], ["created_at", "2019-05-04 22:10:52.782884"]]
+  ↳ db/seeds.rb:123
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:52.786363"], ["id", 12]]
+  ↳ db/seeds.rb:123
+  [1m[35m (125.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:123
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:123
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4510a0f7-3633-4f09-84d0-76d7e2f3f1a2] Performing ActiveStorage::AnalyzeJob (Job ID: 4510a0f7-3633-4f09-84d0-76d7e2f3f1a2) from Inline(default) with arguments: #<GlobalID:0x0247caa0 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/23>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4510a0f7-3633-4f09-84d0-76d7e2f3f1a2] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: iiTTYrRMYuujGBAdkaFgNYkh[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4510a0f7-3633-4f09-84d0-76d7e2f3f1a2] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4510a0f7-3633-4f09-84d0-76d7e2f3f1a2]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4510a0f7-3633-4f09-84d0-76d7e2f3f1a2]   ↳ db/seeds.rb:123
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4510a0f7-3633-4f09-84d0-76d7e2f3f1a2]   [1m[36mActiveStorage::Blob Update (2.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 23]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4510a0f7-3633-4f09-84d0-76d7e2f3f1a2]   ↳ db/seeds.rb:123
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4510a0f7-3633-4f09-84d0-76d7e2f3f1a2]   [1m[35m (135.0ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4510a0f7-3633-4f09-84d0-76d7e2f3f1a2]   ↳ db/seeds.rb:123
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4510a0f7-3633-4f09-84d0-76d7e2f3f1a2] Performed ActiveStorage::AnalyzeJob (Job ID: 4510a0f7-3633-4f09-84d0-76d7e2f3f1a2) from Inline(default) in 148.89ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 4510a0f7-3633-4f09-84d0-76d7e2f3f1a2) to Inline(default) with arguments: #<GlobalID:0x0256073c @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/23>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:127
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:127
+  [1m[36mRestaurant Create (2.9ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "description", "status", "delivery_tax", "state", "city", "street", "neighborhood", "number", "latitude", "longitude", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Club Life"], ["description", "NOSSA ESPECIALIDADE. pratos vegetais de alta qualidade,com opções de alimentos integrais, sem glúten e sem lactose."], ["status", 1], ["delivery_tax", 5.7], ["state", "SP"], ["city", "São Paulo"], ["street", "Alameda dos Uapês"], ["neighborhood", "Planalto Paulista"], ["number", "933"], ["latitude", -23.6129154], ["longitude", -46.648066], ["category_id", 4], ["created_at", "2019-05-04 22:10:53.824330"], ["updated_at", "2019-05-04 22:10:53.824330"]]
+  ↳ db/seeds.rb:127
+  [1m[35m (120.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:127
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:134
+[36m  Disk Storage (4.1ms) [0m[32mUploaded file to key: XMf1nhvccTVVUths4L6xosaw (checksum: ot63IknMjw86v0CYSI50/A==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:134
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "XMf1nhvccTVVUths4L6xosaw"], ["filename", "7.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 361665], ["checksum", "ot63IknMjw86v0CYSI50/A=="], ["created_at", "2019-05-04 22:10:53.968449"]]
+  ↳ db/seeds.rb:134
+  [1m[35m (161.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:134
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:134
+  [1m[36mActiveStorage::Attachment Create (2.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Restaurant"], ["record_id", 7], ["blob_id", 24], ["created_at", "2019-05-04 22:10:54.137694"]]
+  ↳ db/seeds.rb:134
+  [1m[36mRestaurant Update (1.4ms)[0m  [1m[33mUPDATE "restaurants" SET "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:54.143199"], ["id", 7]]
+  ↳ db/seeds.rb:134
+  [1m[35m (153.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:134
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:134
+[ActiveJob] [ActiveStorage::AnalyzeJob] [190007b7-053e-4e4d-81e5-6b24b3d858a5] Performing ActiveStorage::AnalyzeJob (Job ID: 190007b7-053e-4e4d-81e5-6b24b3d858a5) from Inline(default) with arguments: #<GlobalID:0xb634eebc @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/24>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [190007b7-053e-4e4d-81e5-6b24b3d858a5] [36m  Disk Storage (37.0ms) [0m[34mDownloaded file from key: XMf1nhvccTVVUths4L6xosaw[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [190007b7-053e-4e4d-81e5-6b24b3d858a5] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [190007b7-053e-4e4d-81e5-6b24b3d858a5]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [190007b7-053e-4e4d-81e5-6b24b3d858a5]   ↳ db/seeds.rb:134
+[ActiveJob] [ActiveStorage::AnalyzeJob] [190007b7-053e-4e4d-81e5-6b24b3d858a5]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 24]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [190007b7-053e-4e4d-81e5-6b24b3d858a5]   ↳ db/seeds.rb:134
+[ActiveJob] [ActiveStorage::AnalyzeJob] [190007b7-053e-4e4d-81e5-6b24b3d858a5]   [1m[35m (128.2ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [190007b7-053e-4e4d-81e5-6b24b3d858a5]   ↳ db/seeds.rb:134
+[ActiveJob] [ActiveStorage::AnalyzeJob] [190007b7-053e-4e4d-81e5-6b24b3d858a5] Performed ActiveStorage::AnalyzeJob (Job ID: 190007b7-053e-4e4d-81e5-6b24b3d858a5) from Inline(default) in 173.54ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 190007b7-053e-4e4d-81e5-6b24b3d858a5) to Inline(default) with arguments: #<GlobalID:0x017936e0 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/24>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:135
+  [1m[36mProductCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "product_categories" ("title", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Saladas, molhos e wraps"], ["restaurant_id", 7], ["created_at", "2019-05-04 22:10:55.202832"], ["updated_at", "2019-05-04 22:10:55.202832"]]
+  ↳ db/seeds.rb:135
+  [1m[35m (136.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:135
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:136
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Coleslaw"], ["description", "Repolho roxo, couve, cenoura, cebola, maionese de castanha e xylitol"], ["price", 8.99], ["product_category_id", 7], ["created_at", "2019-05-04 22:10:56.084869"], ["updated_at", "2019-05-04 22:10:56.084869"]]
+  ↳ db/seeds.rb:136
+  [1m[35m (120.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:136
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:137
+[36m  Disk Storage (11.1ms) [0m[32mUploaded file to key: bRX4exYLTxePcqMeyFTkDi3d (checksum: 0jf2RIpmyk8FNvZtmdOc8g==)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:137
+  [1m[36mActiveStorage::Blob Create (1.8ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "bRX4exYLTxePcqMeyFTkDi3d"], ["filename", "coleslaw.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 1676701], ["checksum", "0jf2RIpmyk8FNvZtmdOc8g=="], ["created_at", "2019-05-04 22:10:56.235338"]]
+  ↳ db/seeds.rb:137
+  [1m[35m (137.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:137
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:137
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 13], ["blob_id", 25], ["created_at", "2019-05-04 22:10:56.379031"]]
+  ↳ db/seeds.rb:137
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:56.381931"], ["id", 13]]
+  ↳ db/seeds.rb:137
+  [1m[35m (140.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:137
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:137
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9aed278-4008-47d2-86fd-bad2a174b7cd] Performing ActiveStorage::AnalyzeJob (Job ID: f9aed278-4008-47d2-86fd-bad2a174b7cd) from Inline(default) with arguments: #<GlobalID:0x02673584 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/25>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9aed278-4008-47d2-86fd-bad2a174b7cd] [36m  Disk Storage (4.5ms) [0m[34mDownloaded file from key: bRX4exYLTxePcqMeyFTkDi3d[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9aed278-4008-47d2-86fd-bad2a174b7cd] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9aed278-4008-47d2-86fd-bad2a174b7cd]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9aed278-4008-47d2-86fd-bad2a174b7cd]   ↳ db/seeds.rb:137
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9aed278-4008-47d2-86fd-bad2a174b7cd]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 25]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9aed278-4008-47d2-86fd-bad2a174b7cd]   ↳ db/seeds.rb:137
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9aed278-4008-47d2-86fd-bad2a174b7cd]   [1m[35m (113.6ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9aed278-4008-47d2-86fd-bad2a174b7cd]   ↳ db/seeds.rb:137
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9aed278-4008-47d2-86fd-bad2a174b7cd] Performed ActiveStorage::AnalyzeJob (Job ID: f9aed278-4008-47d2-86fd-bad2a174b7cd) from Inline(default) in 127.02ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: f9aed278-4008-47d2-86fd-bad2a174b7cd) to Inline(default) with arguments: #<GlobalID:0x02755f74 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/25>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:138
+  [1m[36mProduct Create (1.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Side salad"], ["description", "Mix de folhas com cenoura ralada, tomatinho sweet e semente de girassol."], ["price", 9.9], ["product_category_id", 7], ["created_at", "2019-05-04 22:10:57.624413"], ["updated_at", "2019-05-04 22:10:57.624413"]]
+  ↳ db/seeds.rb:138
+  [1m[35m (150.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:138
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:139
+[36m  Disk Storage (1.5ms) [0m[32mUploaded file to key: EDZioqti6Zv7P1pPKLnSzDGq (checksum: xTk3hPNVamAITlrohCxp3g==)[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:139
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "EDZioqti6Zv7P1pPKLnSzDGq"], ["filename", "side-salad.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 12713], ["checksum", "xTk3hPNVamAITlrohCxp3g=="], ["created_at", "2019-05-04 22:10:57.831643"]]
+  ↳ db/seeds.rb:139
+  [1m[35m (153.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:139
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:139
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 14], ["blob_id", 26], ["created_at", "2019-05-04 22:10:57.991471"]]
+  ↳ db/seeds.rb:139
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:57.994570"], ["id", 14]]
+  ↳ db/seeds.rb:139
+  [1m[35m (160.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:139
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:139
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a8b6c0bb-23f0-4adf-8a99-ed5cc1b78e60] Performing ActiveStorage::AnalyzeJob (Job ID: a8b6c0bb-23f0-4adf-8a99-ed5cc1b78e60) from Inline(default) with arguments: #<GlobalID:0xb612bacc @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/26>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a8b6c0bb-23f0-4adf-8a99-ed5cc1b78e60] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: EDZioqti6Zv7P1pPKLnSzDGq[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a8b6c0bb-23f0-4adf-8a99-ed5cc1b78e60] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a8b6c0bb-23f0-4adf-8a99-ed5cc1b78e60]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a8b6c0bb-23f0-4adf-8a99-ed5cc1b78e60]   ↳ db/seeds.rb:139
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a8b6c0bb-23f0-4adf-8a99-ed5cc1b78e60]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 26]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a8b6c0bb-23f0-4adf-8a99-ed5cc1b78e60]   ↳ db/seeds.rb:139
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a8b6c0bb-23f0-4adf-8a99-ed5cc1b78e60]   [1m[35m (133.2ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a8b6c0bb-23f0-4adf-8a99-ed5cc1b78e60]   ↳ db/seeds.rb:139
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a8b6c0bb-23f0-4adf-8a99-ed5cc1b78e60] Performed ActiveStorage::AnalyzeJob (Job ID: a8b6c0bb-23f0-4adf-8a99-ed5cc1b78e60) from Inline(default) in 141.82ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: a8b6c0bb-23f0-4adf-8a99-ed5cc1b78e60) to Inline(default) with arguments: #<GlobalID:0x00f50708 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/26>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:142
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:142
+  [1m[36mRestaurant Create (2.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "description", "status", "delivery_tax", "state", "city", "street", "neighborhood", "number", "latitude", "longitude", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Casa Natural"], ["description", "Oferecemos, desde 1981, refeições ovo-lacto-vegetarianas, leves, saudáveis, balanceadas e principalmente saborosas, procurando aliar o sabor, a qualidade de vida e o bem-estar dos clientes."], ["status", 1], ["delivery_tax", 8.3], ["state", "SP"], ["city", "São Paulo"], ["street", "Rua Natal"], ["neighborhood", "Cantinho do Céu"], ["number", "938"], ["latitude", -23.6567329], ["longitude", -46.4633359], ["category_id", 4], ["created_at", "2019-05-04 22:10:59.158384"], ["updated_at", "2019-05-04 22:10:59.158384"]]
+  ↳ db/seeds.rb:142
+  [1m[35m (123.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:142
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:149
+[36m  Disk Storage (1.6ms) [0m[32mUploaded file to key: cVDCXLoJ24H4auAqwShbSwe5 (checksum: ywDrROH5JvSaoL5Gzl4zwg==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:149
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "cVDCXLoJ24H4auAqwShbSwe5"], ["filename", "8.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 233270], ["checksum", "ywDrROH5JvSaoL5Gzl4zwg=="], ["created_at", "2019-05-04 22:10:59.298007"]]
+  ↳ db/seeds.rb:149
+  [1m[35m (143.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:149
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:149
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Restaurant"], ["record_id", 8], ["blob_id", 27], ["created_at", "2019-05-04 22:10:59.448800"]]
+  ↳ db/seeds.rb:149
+  [1m[36mRestaurant Update (0.3ms)[0m  [1m[33mUPDATE "restaurants" SET "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["updated_at", "2019-05-04 22:10:59.452027"], ["id", 8]]
+  ↳ db/seeds.rb:149
+  [1m[35m (114.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:149
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:149
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e07eddcf-643a-456e-b291-e64ed46771a3] Performing ActiveStorage::AnalyzeJob (Job ID: e07eddcf-643a-456e-b291-e64ed46771a3) from Inline(default) with arguments: #<GlobalID:0xb639bf00 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/27>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e07eddcf-643a-456e-b291-e64ed46771a3] [36m  Disk Storage (2.0ms) [0m[34mDownloaded file from key: cVDCXLoJ24H4auAqwShbSwe5[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e07eddcf-643a-456e-b291-e64ed46771a3] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e07eddcf-643a-456e-b291-e64ed46771a3]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e07eddcf-643a-456e-b291-e64ed46771a3]   ↳ db/seeds.rb:149
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e07eddcf-643a-456e-b291-e64ed46771a3]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 27]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e07eddcf-643a-456e-b291-e64ed46771a3]   ↳ db/seeds.rb:149
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e07eddcf-643a-456e-b291-e64ed46771a3]   [1m[35m (106.5ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e07eddcf-643a-456e-b291-e64ed46771a3]   ↳ db/seeds.rb:149
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e07eddcf-643a-456e-b291-e64ed46771a3] Performed ActiveStorage::AnalyzeJob (Job ID: e07eddcf-643a-456e-b291-e64ed46771a3) from Inline(default) in 118.85ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: e07eddcf-643a-456e-b291-e64ed46771a3) to Inline(default) with arguments: #<GlobalID:0x01487988 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/27>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:150
+  [1m[36mProductCategory Create (1.7ms)[0m  [1m[32mINSERT INTO "product_categories" ("title", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Saladas, molhos e wraps"], ["restaurant_id", 8], ["created_at", "2019-05-04 22:11:00.483400"], ["updated_at", "2019-05-04 22:11:00.483400"]]
+  ↳ db/seeds.rb:150
+  [1m[35m (110.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:150
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:151
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Salada de quinoa"], ["description", "Alface americana, roxa, frisee, quinoa cozida, cenoura, tomate, damasco dessecado, amendoa crua."], ["price", 20.9], ["product_category_id", 8], ["created_at", "2019-05-04 22:11:01.447825"], ["updated_at", "2019-05-04 22:11:01.447825"]]
+  ↳ db/seeds.rb:151
+  [1m[35m (126.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:151
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:152
+[36m  Disk Storage (0.8ms) [0m[32mUploaded file to key: Br7P4YRmh5Nxfwi4XzFGVTuc (checksum: UnYA+SnYpMtqUxycmI1Xsw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:152
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "Br7P4YRmh5Nxfwi4XzFGVTuc"], ["filename", "salada-de-quinoa.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 47435], ["checksum", "UnYA+SnYpMtqUxycmI1Xsw=="], ["created_at", "2019-05-04 22:11:01.586830"]]
+  ↳ db/seeds.rb:152
+  [1m[35m (100.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:152
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:152
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 15], ["blob_id", 28], ["created_at", "2019-05-04 22:11:01.693168"]]
+  ↳ db/seeds.rb:152
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:11:01.696102"], ["id", 15]]
+  ↳ db/seeds.rb:152
+  [1m[35m (150.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:152
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:152
+[ActiveJob] [ActiveStorage::AnalyzeJob] [aa33a6ff-9d5a-4a3b-8bb5-6afee811b205] Performing ActiveStorage::AnalyzeJob (Job ID: aa33a6ff-9d5a-4a3b-8bb5-6afee811b205) from Inline(default) with arguments: #<GlobalID:0x02bf3324 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/28>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [aa33a6ff-9d5a-4a3b-8bb5-6afee811b205] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: Br7P4YRmh5Nxfwi4XzFGVTuc[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [aa33a6ff-9d5a-4a3b-8bb5-6afee811b205] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [aa33a6ff-9d5a-4a3b-8bb5-6afee811b205]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [aa33a6ff-9d5a-4a3b-8bb5-6afee811b205]   ↳ db/seeds.rb:152
+[ActiveJob] [ActiveStorage::AnalyzeJob] [aa33a6ff-9d5a-4a3b-8bb5-6afee811b205]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 28]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [aa33a6ff-9d5a-4a3b-8bb5-6afee811b205]   ↳ db/seeds.rb:152
+[ActiveJob] [ActiveStorage::AnalyzeJob] [aa33a6ff-9d5a-4a3b-8bb5-6afee811b205]   [1m[35m (140.8ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [aa33a6ff-9d5a-4a3b-8bb5-6afee811b205]   ↳ db/seeds.rb:152
+[ActiveJob] [ActiveStorage::AnalyzeJob] [aa33a6ff-9d5a-4a3b-8bb5-6afee811b205] Performed ActiveStorage::AnalyzeJob (Job ID: aa33a6ff-9d5a-4a3b-8bb5-6afee811b205) from Inline(default) in 150.37ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: aa33a6ff-9d5a-4a3b-8bb5-6afee811b205) to Inline(default) with arguments: #<GlobalID:0xb6134028 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/28>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:153
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "product_category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Coleslaw"], ["description", "Repolho roxo, couve, cenoura, cebola, maionese de castanha e xylitol"], ["price", 11.0], ["product_category_id", 8], ["created_at", "2019-05-04 22:11:02.808511"], ["updated_at", "2019-05-04 22:11:02.808511"]]
+  ↳ db/seeds.rb:153
+  [1m[35m (121.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:153
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:154
+[36m  Disk Storage (12.9ms) [0m[32mUploaded file to key: RBgpt7DTvicWRKQpDGTXxEwC (checksum: NA8MazS7tTk94BbJrDJERw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:154
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "RBgpt7DTvicWRKQpDGTXxEwC"], ["filename", "coleslaw2.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 6787], ["checksum", "NA8MazS7tTk94BbJrDJERw=="], ["created_at", "2019-05-04 22:11:02.951939"]]
+  ↳ db/seeds.rb:154
+  [1m[35m (174.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:154
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:154
+  [1m[36mActiveStorage::Attachment Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Product"], ["record_id", 16], ["blob_id", 29], ["created_at", "2019-05-04 22:11:03.133002"]]
+  ↳ db/seeds.rb:154
+  [1m[36mProduct Update (0.2ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2019-05-04 22:11:03.137120"], ["id", 16]]
+  ↳ db/seeds.rb:154
+  [1m[35m (142.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:154
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:154
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2ecd5f-9471-4c32-a28d-2a173b07b72d] Performing ActiveStorage::AnalyzeJob (Job ID: be2ecd5f-9471-4c32-a28d-2a173b07b72d) from Inline(default) with arguments: #<GlobalID:0xb63d9404 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/29>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2ecd5f-9471-4c32-a28d-2a173b07b72d] [36m  Disk Storage (5.3ms) [0m[34mDownloaded file from key: RBgpt7DTvicWRKQpDGTXxEwC[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2ecd5f-9471-4c32-a28d-2a173b07b72d] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2ecd5f-9471-4c32-a28d-2a173b07b72d]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2ecd5f-9471-4c32-a28d-2a173b07b72d]   ↳ db/seeds.rb:154
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2ecd5f-9471-4c32-a28d-2a173b07b72d]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 29]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2ecd5f-9471-4c32-a28d-2a173b07b72d]   ↳ db/seeds.rb:154
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2ecd5f-9471-4c32-a28d-2a173b07b72d]   [1m[35m (178.9ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2ecd5f-9471-4c32-a28d-2a173b07b72d]   ↳ db/seeds.rb:154
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be2ecd5f-9471-4c32-a28d-2a173b07b72d] Performed ActiveStorage::AnalyzeJob (Job ID: be2ecd5f-9471-4c32-a28d-2a173b07b72d) from Inline(default) in 193.27ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: be2ecd5f-9471-4c32-a28d-2a173b07b72d) to Inline(default) with arguments: #<GlobalID:0x01521704 @uri=#<URI::GID gid://wifood/ActiveStorage::Blob/29>>
+Started GET "/" for 127.0.0.1 at 2019-05-04 19:11:46 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wsaspire/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/wsaspire/.rvm/gems/ruby-2.4.4/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wsaspire/.rvm/gems/ruby-2.4.4/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (5.0ms)
+Completed 200 OK in 81ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-05-04 19:11:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/res" for 127.0.0.1 at 2019-05-04 19:11:55 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/res"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/restaurants" for 127.0.0.1 at 2019-05-04 19:12:05 -0300
+  
+SyntaxError (/home/wsaspire/rails_experimentos/ifood_clone/ifood_clone/app/controllers/restaurants_controller.rb:24: syntax error, unexpected keyword_end, expecting end-of-input
+  end
+     ^):
+  
+app/controllers/restaurants_controller.rb:24: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/restaurants" for 127.0.0.1 at 2019-05-04 19:13:43 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wsaspire/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/wsaspire/rails_experimentos/ifood_clone/ifood_clone/app/controllers/restaurants_controller.rb:40: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/restaurants_controller.rb:40: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/restaurants" for 127.0.0.1 at 2019-05-04 19:14:13 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wsaspire/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by RestaurantsController#index as HTML
+Creating scope :open. Overwriting existing method Restaurant.open.
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT restaurants.*, (69.09332411348201 * ABS(restaurants.latitude - -23.5506507) * 0.7071067811865475) + (59.836573914187355 * ABS(restaurants.longitude - -46.6333824) * 0.7071067811865475) AS distance, CASE WHEN (restaurants.latitude >= -23.5506507 AND restaurants.longitude >= -46.6333824) THEN  45.0 WHEN (restaurants.latitude <  -23.5506507 AND restaurants.longitude >= -46.6333824) THEN 135.0 WHEN (restaurants.latitude <  -23.5506507 AND restaurants.longitude <  -46.6333824) THEN 225.0 WHEN (restaurants.latitude >= -23.5506507 AND restaurants.longitude <  -46.6333824) THEN 315.0 END AS bearing FROM "restaurants" WHERE (restaurants.latitude BETWEEN -23.840114266221693 AND -23.261187133778304 AND restaurants.longitude BETWEEN -46.94914686874913 AND -46.31761793125087) ORDER BY distance ASC[0m
+  ↳ app/controllers/restaurants_controller.rb:8
+Completed 500 Internal Server Error in 902ms (ActiveRecord: 2.5ms)
+
+
+  
+SyntaxError (/home/wsaspire/rails_experimentos/ifood_clone/ifood_clone/app/serializers/restaurant_serializer.rb:14: syntax error, unexpected '.'
+    object.reviews&&.average(:value)
+                     ^):
+  
+app/serializers/restaurant_serializer.rb:14: syntax error, unexpected '.'
+app/controllers/restaurants_controller.rb:8:in `index'
+Started GET "/restaurants" for 127.0.0.1 at 2019-05-04 19:15:54 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wsaspire/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by RestaurantsController#index as HTML
+Creating scope :open. Overwriting existing method Restaurant.open.
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT restaurants.*, (69.09332411348201 * ABS(restaurants.latitude - -23.5506507) * 0.7071067811865475) + (59.836573914187355 * ABS(restaurants.longitude - -46.6333824) * 0.7071067811865475) AS distance, CASE WHEN (restaurants.latitude >= -23.5506507 AND restaurants.longitude >= -46.6333824) THEN  45.0 WHEN (restaurants.latitude <  -23.5506507 AND restaurants.longitude >= -46.6333824) THEN 135.0 WHEN (restaurants.latitude <  -23.5506507 AND restaurants.longitude <  -46.6333824) THEN 225.0 WHEN (restaurants.latitude >= -23.5506507 AND restaurants.longitude <  -46.6333824) THEN 315.0 END AS bearing FROM "restaurants" WHERE (restaurants.latitude BETWEEN -23.840114266221693 AND -23.261187133778304 AND restaurants.longitude BETWEEN -46.94914686874913 AND -46.31761793125087) ORDER BY distance ASC[0m
+  ↳ app/controllers/restaurants_controller.rb:8
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."value") FROM "reviews" WHERE "reviews"."restaurant_id" = ?[0m  [["restaurant_id", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:14
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:10
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:10
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:18
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."value") FROM "reviews" WHERE "reviews"."restaurant_id" = ?[0m  [["restaurant_id", 2]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:14
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:10
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:10
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:18
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."value") FROM "reviews" WHERE "reviews"."restaurant_id" = ?[0m  [["restaurant_id", 6]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:14
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:10
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:10
+[active_model_serializers]   [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:18
+[active_model_serializers]   [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."value") FROM "reviews" WHERE "reviews"."restaurant_id" = ?[0m  [["restaurant_id", 7]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:14
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:10
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:10
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:18
+[active_model_serializers]   [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."value") FROM "reviews" WHERE "reviews"."restaurant_id" = ?[0m  [["restaurant_id", 3]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:14
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:10
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:10
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:18
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."value") FROM "reviews" WHERE "reviews"."restaurant_id" = ?[0m  [["restaurant_id", 8]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:14
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:10
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:10
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/restaurant_serializer.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (166.78ms)
+Completed 200 OK in 1026ms (Views: 265.0ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-04 19:16:39 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/wsaspire/.rvm/gems/ruby-2.4.4/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wsaspire/.rvm/gems/ruby-2.4.4/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (4.1ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-05-04 19:16:43 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/orders"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/orders" for 127.0.0.1 at 2019-05-04 19:16:48 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/orders"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/categories" for 127.0.0.1 at 2019-05-04 19:17:00 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."title" ASC[0m
+  ↳ app/controllers/categories_controller.rb:4
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/category_serializer.rb:7
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/category_serializer.rb:7
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/category_serializer.rb:7
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/category_serializer.rb:7
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/category_serializer.rb:7
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/category_serializer.rb:7
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/category_serializer.rb:7
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/category_serializer.rb:7
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/category_serializer.rb:7
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/category_serializer.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (64.61ms)
+Completed 200 OK in 87ms (Views: 71.1ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/e" for 127.0.0.1 at 2019-05-04 19:17:46 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/e"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-05-04 19:17:54 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/wsaspire/.rvm/gems/ruby-2.4.4/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wsaspire/.rvm/gems/ruby-2.4.4/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (4.5ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-04 19:18:53 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/wsaspire/.rvm/gems/ruby-2.4.4/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wsaspire/.rvm/gems/ruby-2.4.4/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (4.8ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
