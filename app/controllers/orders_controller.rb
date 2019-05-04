@@ -18,7 +18,6 @@ class OrdersController < ApplicationController
 
 
 
-
   private
     def set_order
       @order = Order.find(params[:id])
