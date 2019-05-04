@@ -1,6 +1,7 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: :show
 
+
   def index	
     @restaurants = Restaurant.near(params[:city] || 'São Paulo')
     filter_by_category if params[:category]
@@ -21,6 +22,9 @@ class RestaurantsController < ApplicationController
       render json: @restaurant 
     end
   end
+
+
+
 
   private
     def filter_by_category
