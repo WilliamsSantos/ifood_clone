@@ -1,5 +1,17 @@
 import React from 'react';
- 
-const App = () => <p>Ifood Clone</p>
- 
+import "./App.scss";
+import { Container, Section } from 'rbx';
+import Header from "./components/header";
+
+const App = () => (
+  <div>
+    <Header />
+    <Section>
+      <Container>
+        One Bit Food
+      </Container>
+    </Section>
+  </div>
+)
+
 export default App;
